@@ -1,0 +1,20 @@
+import pandas as pd
+
+data = pd.read_csv('student_book.csv', delimiter=';',
+                   names=['student_name', 'student_age', 'student_surname', 'student_teacher'])
+
+print(data)
+
+
+row_num = int(input("Введите номер строки: "))
+col_num = int(input("Введите номер столбца: "))
+
+new_value = input("Введите новое значение: ")
+data.iloc[row_num, col_num] = new_value
+
+
+data.to_csv('MAMA.csv', sep=';', header=False, index=False)
+
+
+print("\nОбновленные данные:")
+print(data)
