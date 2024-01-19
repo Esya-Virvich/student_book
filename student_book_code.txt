@@ -13,7 +13,7 @@ new_value = input("Введите новое значение: ")
 data.iloc[row_num, col_num] = new_value
 
 
-data.to_csv('MAMA.csv', sep=';', header=False, index=False)
+data.to_csv('student.csv', sep=';', header=False, index=False)
 
 
 print("\nОбновленные данные:")
